@@ -1,0 +1,5 @@
+<h3>PRODUCTOS</h3>
+<div *ngFor="let prod of listaProductos">
+  {{ prod.nombre }} - ${{ prod.precio }} 
+  <button (click)="agregar(prod)">Agregar</button>
+</div>

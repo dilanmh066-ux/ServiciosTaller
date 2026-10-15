@@ -1,12 +1,25 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { ControlContadorComponent } from './control-contador/control-contador';
+import { VisorContadorComponent } from './visor-contador/visor-contador';
+import { ProductosComponent } from './productos/productos';
+import { CarritoComponent } from './carrito/carrito';
+import { EmisorComponent } from './emisor/emisor';
+import { ReceptorComponent } from './receptor/receptor';
+import { HistorialComponent } from './historial/historial';
 
 @Component({
-  imports: [RouterOutlet],
   selector: 'app-root',
-  styleUrl: './app.css',
+  standalone: true,
+  imports: [
+    ControlContadorComponent,
+    VisorContadorComponent,
+    ProductosComponent,
+    CarritoComponent,
+    EmisorComponent,
+    ReceptorComponent,
+    HistorialComponent
+  ],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('taller-servicios');
-}
+export class App {}

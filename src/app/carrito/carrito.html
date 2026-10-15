@@ -1,0 +1,11 @@
+<h3>MI CARRITO</h3>
+
+<div *ngFor="let item of (carritoService.carrito$ | async); let i = index">
+  {{ item.nombre }} 
+  <button (click)="eliminar(i)">Eliminar</button>
+</div>
+
+<p>Productos: {{ (carritoService.carrito$ | async)?.length || 0 }}</p>
+<p>Total: ${{ carritoService.obtenerTotal() }}</p>
+
+<button (click)="vaciar()">Vaciar Carrito</button>
